@@ -26,10 +26,11 @@ public class Anagram {
         Dictionary dictionary = new EnglishDictionary();
         AnagramSolver solver = new AnagramSolver(dictionary);
         Set<String> myAnagrams = solver.getAnagrams(word);
-//        for (String s: myAnagrams) {
-//            System.out.println(s);
-//        }
-        return myAnagrams.toString();
+        StringBuilder builder = new StringBuilder();
+        for (String s: myAnagrams) {
+            builder.append(s + " ");
+        }
+        return builder.toString();
 
     }
 
